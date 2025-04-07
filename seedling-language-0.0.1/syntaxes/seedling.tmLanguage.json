@@ -1,0 +1,151 @@
+{
+    "$schema": "https://raw.githubusercontent.com/martinring/tmlanguage/master/tmlanguage.json",
+    "name": "Seedling",
+    "scopeName": "source.seedling",
+    "fileTypes": ["seed", "h"],
+    "patterns": [
+        {
+            "include": "#scope"
+        },
+        {
+            "include": "#sections"
+        },
+        {
+            "include": "#data_types"
+        },       
+         {
+            "include": "#data_tools_one"
+        }, 
+        {
+            "include": "#data_tools_two"
+        },
+        {
+            "include": "#data_modifiers"
+        },
+        {
+            "include": "#arch_8_regs"
+        },
+        {
+            "include": "#arch_16_regs"
+        },
+        {
+            "include": "#arch_32_regs"
+        },
+        {
+            "include": "#arch_64_regs"
+        },
+        {
+            "include": "#strings"
+        },
+        {
+            "include": "#comments"
+        },
+        {
+            "include": "#numbers"
+        },
+        {
+            "include": "#variables"
+        }
+    ],
+    "repository": {
+        "scope": {
+            "patterns": [{
+                "name": "keyword.scope.seedling",
+                "match": "\\b(universal|global|global_block|local|local_block|call|pass_arg|add_aisle|sub_aisle)\\b"
+            }]
+        },
+        "sections": {
+            "patterns": [{
+                "name": "keyword.sections.seedling",
+                "match": "\\.(declare_sect|assign_sect|code_sect|literal_sect|file_sect|arch_8|arch_16|arch_32|arch_64|end)\\b"
+            }]
+        },
+        "data_types": {
+            "patterns": [{
+                "name": "keyword.data_type.seedling",
+                "match": "\\b(num|mark|deci|decii|strand|den|dens|bay|bays|aisle|aisles|zone|zones|passage|num_value|hex_value|oct_value|bin_value)\\b"
+            }]
+        },
+        "data_tools_one": {
+            "patterns": [{
+                "name": "keyword.data_tool_one.seedling",
+                "match": "\\b(move_aisle|move_den|move_bay|move_zone|push_aisle|push_den|push_bay|push_zone|pop_aisle|pop_den|pop_bay|pop_zones|hold|assign|add|sub|mul|divset_flag|test|table|sub_aisle|comp_den|comp_bay|comp_aisle|comp_zone)\\b"
+            }]
+        },
+        "data_tools_two": {
+            "patterns": [{
+                "name": "keyword.data_tool_two.seedling",
+                "match": "\\b(aisle_ptr|bay_ptr|zone_ptr|den_ptr|bays_ptr|zones_ptr|address|fetch|int)\\b"
+            }]
+        },
+        "data_modifiers": {
+            "patterns": [{
+                "name": "keyword.data_modifier.seedling",
+                "match": "\\b(extern|intern|proto|jump|jump_less|jump_greater|jump_equal|jump_not_equal|jump_less_equal|jump_greater_equal|jump_neg|ret|set_flag|call_system|jump_zero|ince_den|inc_bay|inc_aisle|inc_zone|arg)\\b"
+            }]
+        },
+
+"arch_8_regs": {
+    "patterns": [{
+        "name": "keyword.arch_8_regs.seedling",
+        "match": "\\b(al|ah|bl|bh|cl|ch|dl|dh|sil|dil|bpl|spl|r8b|r9b|r10b|r11b|r12b|r13b|r14b|r15b)\\b"
+    }]
+},
+"arch_16_regs": {
+    "patterns": [{
+        "name": "keyword.arch_16_regs.seedling",
+        "match": "\\b(ax|bx|cx|dx|si|di|bp|sp|r8w|r9w|r10w|r11w|r12w|r13w|r14w|r15w)\\b"
+    }]
+},
+"arch_32_regs": {
+    "patterns": [{
+        "name": "keyword.arch_32_regs.seedling",
+        "match": "\\b(eax|ebx|ecx|edx|esi|edi|ebp|esp|r8d|r9d|r10d|r11d|r12d|r13d|r14d|r15d)\\b"
+    }]
+},
+"arch_64_regs": {
+    "patterns": [{
+        "name": "keyword.arch_64_regs.seedling",
+        "match": "\\b(rax|rbx|rcx|rdx|rsi|rdi|rbp|rsp|r8|r9|r10|r11|r12|r13|r14|r15)\\b"
+    }]
+},
+
+        "strings": {
+            "name": "string.quoted.double.seedling",
+            "begin": "\"",
+            "end": "\"",
+            "patterns": [{
+                "name": "constant.character.escape.seedling",
+                "match": "\\\\."
+            }]
+        },
+        "comments": {
+            "patterns": [
+                {
+                    "name": "comment.line.double-slash.seedling",
+                    "match": "//.*$"
+                },
+                {
+                    "name": "comment.block.seedling",
+                    "begin": "/\\*",
+                    "end": "\\*/",
+                    "captures": {
+                        "0": { "name": "punctuation.definition.comment.seedling" }
+                    }
+                }
+            ]
+        },
+        "numbers": {
+            "patterns": [{
+                "name": "constant.numeric.illeshian",
+                "match": "\\b(0x[0-9a-fA-F]+|[0-9]+)\\b"
+            }]
+        },
+        "variables": {
+            "patterns": [{
+                "name": "variable.other.seedling",
+                "match": "\\b[a-zA-Z_][a-zA-Z0-9_]*\\b"
+            }]
+        }
+    }
+}

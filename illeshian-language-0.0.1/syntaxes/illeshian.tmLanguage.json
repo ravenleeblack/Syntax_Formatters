@@ -1,0 +1,160 @@
+{
+    "$schema": "https://raw.githubusercontent.com/martinring/tmlanguage/master/tmlanguage.json",
+    "name": "Illeshian",
+    "scopeName": "source.illeshian",
+    "fileTypes": ["ill", "h"],
+    "patterns": [
+  
+        {
+            "include": "#function_related"
+        },
+        {
+            "include": "#data_types"
+        },       
+         {
+            "include": "#data_tools_one"
+        }, 
+        {
+            "include": "#data_tools_two"
+        },
+        {
+            "include": "#data_modifiers"
+        },
+        {
+            "include": "#strings"
+        },
+        {
+            "include": "#comments"
+        },
+        {
+            "include": "#numbers"
+        },
+        {
+            "include": "#errors"
+        },
+        {
+            "include": "#pointer_one"
+        },
+        {
+            "include": "#pointer_two"
+        },
+        {
+            "include": "#groupitive"
+        },
+        {
+            "include": "#operator_one"
+        },
+        {
+            "include": "#operator_two"
+        },
+        {
+            "include": "#variables"
+        }
+    ],
+    "repository": {
+        "function_related": {
+            "patterns": [{
+                "name": "keyword.function_related.illeshian",
+                "match": "\\b(manager|function|seedling|log|list|call|pass_arg|yield|y|y_pos|y_rot|y_position|y_scale|normal|NORMAL)\\b"
+            }]
+        },
+        
+        "data_types": {
+            "patterns": [{
+                "name": "keyword.data_type.illeshian",
+                "match": "\\b(hollow|num|mark|deci|decii|strand|z|zed|z_pos|z_rot|z_position|z_scale|edge|EDGE)\\b"
+            }]
+        },
+        "data_tools_one": {
+            "patterns": [{
+                "name": "keyword.data_tool_one.illeshian",
+                "match": "\\b(hold|assign|table|check|else|loop|set_loop|compare|state|line|other|step|next|break|cycle)\\b"
+            }]
+        },
+        "data_tools_two": {
+            "patterns": [{
+                "name": "keyword.data_tool_two.illeshian",
+                "match": "\\b(pare|tripare|address|fetch)\\b"
+            }]
+        },
+        "data_modifiers": {
+            "patterns": [{
+                "name": "keyword.data_modifier.illeshian",
+                "match": "\\b(extern|intern|proto|func_ptr|mana_ptr|table_ptr|log_ptr|list_ptr)\\b"
+            }]
+        },
+        "pointer_one": {
+            "patterns": [{
+                "name": "keyword.pointer_one.illeshian",
+                "match": "\\b(hollow_ptr|num_ptr|mark_ptr|strand_ptr|deci_ptr|decii_ptr|address|fetch|aisle_ptr|den_ptr|bay_ptr|zone_ptr|aisles_ptr|dens_ptr|bays_ptr|zones_ptr)\\b"
+            }]
+        },
+        "strings": {
+            "name": "string.quoted.double.illeshian",
+            "begin": "\"",
+            "end": "\"",
+            "patterns": [{
+                "name": "constant.character.escape.illeshian",
+                "match": "\\\\."
+            }]
+        },
+        "comments": {
+            "patterns": [
+                {
+                    "name": "comment.line.double-slash.illeshian",
+                    "match": "//.*$"
+                },
+                {
+                    "name": "comment.block.illeshian",
+                    "begin": "/\\*",
+                    "end": "\\*/",
+                    "captures": {
+                        "0": { "name": "punctuation.definition.comment.illeshian" }
+                    }
+                }
+            ]
+        },
+        "numbers": {
+            "patterns": [{
+                "name": "constant.numeric.illeshian",
+                "match": "\\b(0x[0-9a-fA-F]+|[0-9]+)\\b"
+            }]
+        },
+        "errors": {
+            "patterns": [{
+                "name": "keyword.errors.illeshian",
+                "match": "\\b(error|x|x_pos|x_rot|x_position|x_scale)\\b"
+            }]
+        },
+        "pointer_two": {
+            "patterns": [{
+                "name": "keyword.pointer_two.illeshian",
+                "match": "[\\[\\]]"
+            }]
+        },
+        "groupitive": {
+            "patterns": [{
+                "name": "keyword.groupitive.illeshian",
+                "match": "[:\\`\\{\\}\\[\\]\\(\\)]"
+            }]
+        },
+        "operator_one": {
+            "patterns": [{
+                "name": "keyword.operator_one.illeshian",
+                "match": "[&|^~?;,]"
+            }]
+        },
+        "operator_two": {
+            "patterns": [{
+                "name": "keyword.operator_two.illeshian",
+            "match": "[+\\-*/=<>!]"
+            }]
+        },
+        "variables": {
+            "patterns": [{
+                "name": "variable.other.illeshian",
+                "match": "\\b[a-zA-Z_][a-zA-Z0-9_]*\\b"
+            }]
+        }
+    }
+}

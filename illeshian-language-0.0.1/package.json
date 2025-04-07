@@ -1,0 +1,48 @@
+{
+	"name": "illeshian-language",
+	"displayName": "Illeshian",
+	"description": "Language support for Illeshian files",
+	"version": "0.0.1",
+	"publisher": "Raven Black",
+	"engines": {
+		"vscode": "^1.75.0"
+	},
+	"categories": [
+		"Programming Languages"
+	],
+	"contributes": {
+		"languages": [
+			{
+				"id": "illeshian",
+				"aliases": [
+					"Illeshian",
+					"illeshian"
+				],
+				"extensions": [
+					".ill",
+					".h"
+				],
+				"configuration": "./language-configuration.json",
+				"icon": {
+					"light": "./illeshian.png",
+					"dark": "./illeshian.png"
+				}
+			}
+		],
+		"grammars": [
+			{
+				"language": "illeshian",
+				"scopeName": "source.illeshian",
+				"path": "./syntaxes/illeshian.tmLanguage.json"
+			}
+		],
+		"configurationDefaults": {
+			"[illeshian]": {
+				"editor.semanticHighlighting.enabled": true
+			}
+		}
+	},
+	"__metadata": {
+		"size": 6465
+	}
+}
