@@ -15,10 +15,8 @@ Example coloring for the Seedling syntax:
 
 ![syntax_structure](https://github.com/user-attachments/assets/d70e33bb-b431-42cb-b7c8-8b5de2c0a67f)
 
-Also using the pre-files I provide will most likely change your wsl2 terminal from the setting.json file.
-So you may want to remove that code if your not interested in your terminal being changed.
-Even doe its not a bad color system for the termnal because I find it readable. 
-You can however play with the functions to create a new color system from it if you do not want to remove it.
+Also using the pre-files I provide will most likely change your wsl2 terminal.
+In the setting.json file you can change this if you do not want to remove the code from below.
 
 ![terminal_color](https://github.com/user-attachments/assets/44848b43-c6f4-4613-91e6-8623737e3b94)
 
