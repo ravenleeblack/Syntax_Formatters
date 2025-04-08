@@ -1,6 +1,6 @@
 # Syntax_Formatters
 
-These are the 2 syntax formatters I currently use for the Illeshian language and the Seedling Assembler. I try to use an earthy tone for the colors. 
+These are the 2 syntax formatters I currently use for the Illeshian language and the Seedling Assembler. I tried to use an earthy tone for the colors. 
 
 1) Download the files from here.
 2) Move either both the Illeshian and Seedling into C:\Users\your_folder_name\\.vscode\extensions
