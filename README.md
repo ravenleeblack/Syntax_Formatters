@@ -7,6 +7,14 @@ These are the 2 syntax formatters I currently use for the Illeshian language and
 3) Copy the files from the vscode folder that I provided here into your projects .vscode folder. So replace the standard ones they give.
 4) Refresh vscode and the syntax should be on either a .ill or .seed file now.
 
+Example coloring for the Illeshian syntax:
+
+![illeshian_syntax](https://github.com/user-attachments/assets/25f62aff-3fec-4a66-8a6f-c8dff955bfae)
+
+Example coloring for the Seedling syntax:
+
+![syntax_structure](https://github.com/user-attachments/assets/d70e33bb-b431-42cb-b7c8-8b5de2c0a67f)
+
 Also using the pre-files I provide will most likely change your wsl2 terminal from the setting.json file.
 So you may want to remove that code if your not interested in your terminal being changed.
 Even doe its not a bad color system for the termnal because I find it readable. 
@@ -16,3 +24,4 @@ You can however play with the functions to create a new color system from it if 
 
 
 If you want to help make the formatters better feel free to reach out.
+
